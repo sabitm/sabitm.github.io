@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Curiosus mentis - sabitm</title>
+    <subtitle>personal writings and thoughts</subtitle>
+    <link href="https://sabitm.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://sabitm.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-03-04T00:00:00+00:00</updated>
+    <id>https://sabitm.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Emoji (or Unicode) can be joined</title>
+        <published>2023-03-04T00:00:00+00:00</published>
+        <updated>2023-03-04T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://sabitm.github.io/emoji-can-be-joined/" type="text/html"/>
+        <id>https://sabitm.github.io/emoji-can-be-joined/</id>
+        <content type="html">&lt;p&gt;Apparently, this &#x27;👨‍👩‍👦&#x27; or &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;family-man-woman-boy&#x2F;&quot;&gt;Family: Man, Woman, Boy&lt;&#x2F;a&gt; emoji is consisted of
+multiple emojis that are combined or &lt;em&gt;joined&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;$ node
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;Welcome to Node.js v19.7.0.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;Type &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;quot;.help&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; for more information.
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;quot;👨‍👩‍👦&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;👨&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;👩&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;👦&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;or the other way around:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;`👨\u{200D}👩\u{200D}👦`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;👨‍👩‍👦&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;&#x2F;em&gt; You might or might not seeing the family emoji as a single character glyph when you run the above code on your terminal.
+In order to render this emoji correctly, you have to use fonts that support emoji (like &lt;a href=&quot;https:&#x2F;&#x2F;fonts.google.com&#x2F;noto&quot;&gt;Google Noto font&lt;&#x2F;a&gt;)
+and using a terminal that has support for rendering multi-width cell Unicode character (like &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kovidgoyal&#x2F;kitty&quot;&gt;kitty&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Huh. I thought all this time that every Unicode characters (including emojis) are represented by their unique code (which is true,
+but I thought it more like &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ASCII&quot;&gt;ascii&lt;&#x2F;a&gt; characters). Today I learned that they can be joined or concatenated.&lt;&#x2F;p&gt;
+&lt;p&gt;If you take a look back at the above example. The emoji &#x27;👨‍👩‍👦&#x27; consists of 5 other Unicode characters or &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Code_point&quot;&gt;code point&lt;&#x2F;a&gt;,
+which 3 of them is the &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;man&#x2F;&quot;&gt;Man emoji (👨)&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;woman&#x2F;&quot;&gt;Woman emoji (👩)&lt;&#x2F;a&gt;, and the
+&lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;boy&#x2F;&quot;&gt;Boy emoji (👦)&lt;&#x2F;a&gt;. When you reconstruct the 3 emojis into one like in the second code snippet, it&#x27;ll return
+the family emoji back.&lt;&#x2F;p&gt;
+&lt;p&gt;So what is that empty char (&lt;code&gt;&#x27;‍&#x27;&lt;&#x2F;code&gt;) then? What is this &lt;code&gt;\u{200D}&lt;&#x2F;code&gt; (or &lt;code&gt;0x200D&lt;&#x2F;code&gt;) thing?&lt;&#x2F;p&gt;
+&lt;p&gt;Both of those are called ZWJ or &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;zero-width-joiner&#x2F;&quot;&gt;Zero Width Joiner&lt;&#x2F;a&gt;.
+This invisible character act as glue or &lt;em&gt;joiner&lt;&#x2F;em&gt; for emoji sequence to create another emoji. AFAICT, this ZWJ sole purpose is
+to join a sequence of emoji and it is not required if you want to join non-emoji Unicode characters like this one: é
+(&lt;a href=&quot;https:&#x2F;&#x2F;www.compart.com&#x2F;en&#x2F;unicode&#x2F;U+0065&quot;&gt;Latin Small Letter E&lt;&#x2F;a&gt; followed by &lt;a href=&quot;https:&#x2F;&#x2F;www.compart.com&#x2F;en&#x2F;unicode&#x2F;U+0301&quot;&gt;Combining Acute Accent&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;é&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;e&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;́&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Right then. Let&#x27;s play around with combining some emojis!&lt;&#x2F;p&gt;
+&lt;p&gt;Suppose you have this &#x27;🧔&#x27; or &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;person-beard&#x2F;&quot;&gt;Person with Beard&lt;&#x2F;a&gt; emoji and you want to create the male version of it
+(yes, this &amp;quot;Person with Beard&amp;quot; emoji is supposed to be &lt;em&gt;gender neutral&lt;&#x2F;em&gt;). I could guess what some of you might think right now: &amp;quot;Let&#x27;s join
+this 🧔 emoji with the 👨 or &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;man&#x2F;&quot;&gt;Man&lt;&#x2F;a&gt; emoji!&amp;quot;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;`🧔\u{200D}👨`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🧔‍👨&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And... it didn&#x27;t work? It just print both emoji characters side-by-side. Not this single 🧔‍♂️ or &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;man-beard&#x2F;&quot;&gt;Man with a Beard&lt;&#x2F;a&gt;
+emoji we expected to see.&lt;&#x2F;p&gt;
+&lt;p&gt;Okay let&#x27;s cheat this time.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🧔‍♂️&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🧔&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;♂&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;️&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Uh oh! So you&#x27;re not joining it with the &amp;quot;Man&amp;quot; emoji, instead you use the &#x27;♂️&#x27; or &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;male-sign&#x2F;&quot;&gt;Male Sign&lt;&#x2F;a&gt; emoji.
+But, why another ZWJ in the end?&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; for (const c of &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;quot;🧔‍♂️&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;) { console.log(`0x${c.codePointAt(0).toString(16)}`) }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;0x1f9d4
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;0x200d
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;0x2642
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;0xfe0f
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It turns out that last character is not a ZWJ! It is &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;variation-selector-16&#x2F;&quot;&gt;Variation Selector-16&lt;&#x2F;a&gt; (U+FE0F).
+This another invisible character is used to specifies that the preceding character should be displayed in the emoji presentation, instead of
+its default text-mode display.&lt;&#x2F;p&gt;
+&lt;p&gt;We could then use the above information to create... the female version of &amp;quot;Person with Beard&amp;quot; emoji.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;`🧔\u{200D}♀\u{FE0F}`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🧔‍♀️&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Want to add a skin tone? Follows the &amp;quot;Person with Beard&amp;quot; emoji with the skin tone of your choice without using ZWJ. Let&#x27;s pick this
+&amp;quot;U+1F3FB&amp;quot; code point or &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;light-skin-tone&#x2F;&quot;&gt;Light Skin Tone&lt;&#x2F;a&gt; as example.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;`🧔\u{1F3FB}\u{200D}♀\u{FE0F}`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🧔🏻‍♀️&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why using code point this time?
+&lt;br&gt;&lt;br&gt;
+Because we aren&#x27;t using ZWJ to &lt;em&gt;join&lt;&#x2F;em&gt; the skin tone, the browser will read the &amp;quot;Person with Beard&amp;quot; emoji followed by the
+&amp;quot;Light Skin Tone&amp;quot; emoji as a valid sequence and then will be rendered as single glyph like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;`🧔🏻\u{200D}♀\u{FE0F}`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🧔🏻‍♀️&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;br&gt;
+Using code point will show you clearly that we appending the skin tone emoji (or code point) after the person emoji.
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;It will be fun to do some &#x27;Guess the Codepoint&#x27; game I think?&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s start from the easiest one.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;guess-the-codepoint&quot;&gt;Guess the Codepoint!&lt;a class=&quot;zola-anchor&quot; href=&quot;#guess-the-codepoint&quot; aria-label=&quot;Anchor link for: guess-the-codepoint&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;❤️‍🔥(Heart on Fire)?&lt;&#x2F;p&gt;
+&lt;details&gt;
+   &lt;summary&gt;Show me&lt;&#x2F;summary&gt;
+&lt;p&gt;Yep it is the &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;red-heart&#x2F;&quot;&gt;Red Heart&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;fire&#x2F;&quot;&gt;Fire&lt;&#x2F;a&gt; emoji.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;❤️‍🔥&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;❤&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;️&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🔥&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;details&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;😮‍💨 (Face Exhaling)?&lt;&#x2F;p&gt;
+&lt;details&gt;
+   &lt;summary&gt;Show me&lt;&#x2F;summary&gt;
+&lt;p&gt;It is &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;face-with-open-mouth&#x2F;&quot;&gt;Face with Open Mouth&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;dashing-away&#x2F;&quot;&gt;Dashing away&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;😮‍💨&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;😮&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;💨&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Yeah, you need to have your mouth open to be able to exhale, right?&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;😵‍💫 (Face with Spiral Eyes)?&lt;&#x2F;p&gt;
+&lt;details&gt;
+   &lt;summary&gt;Show me&lt;&#x2F;summary&gt;
+&lt;p&gt;It is &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;dizzy-face&#x2F;&quot;&gt;Face with Crossed-Out Eyes&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;dizzy&#x2F;&quot;&gt;Dizzy&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;😵‍💫&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;😵&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;💫&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I don&#x27;t know what the differences between &#x27;x&#x27; and spiral eyes &lt;em&gt;symbolically&lt;&#x2F;em&gt;, but both are similarly used to represent dizziness
+(in this emoji context).&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;👨‍🍼 (Man Feeding Baby)?&lt;&#x2F;p&gt;
+&lt;details&gt;
+   &lt;summary&gt;Show me&lt;&#x2F;summary&gt;
+&lt;p&gt;It is &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;man&#x2F;&quot;&gt;Man&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;baby-bottle&#x2F;&quot;&gt;Baby Bottle&lt;&#x2F;a&gt;. (Huh, where is the baby??)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;👨‍🍼&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;👨&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🍼&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Also, hope we can get &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;Emojipedia&#x2F;status&#x2F;1302996324900626435&quot;&gt;Man breast-feeding&lt;&#x2F;a&gt; soon!&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;🐻‍❄️ (Polar Bear)?&lt;&#x2F;p&gt;
+&lt;details&gt;
+   &lt;summary&gt;Show me&lt;&#x2F;summary&gt;
+&lt;p&gt;Yep. It is a &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;bear&#x2F;&quot;&gt;Bear&lt;&#x2F;a&gt; sprinkled with &lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;snowflake&#x2F;&quot;&gt;Snowflake&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🐻‍❄️&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;🐻&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;‍&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;❄&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd700;&quot;&gt;&amp;#39;️&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;details&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;br&gt;
+&lt;p&gt;Ref: &lt;a href=&quot;https:&#x2F;&#x2F;fasterthanli.me&#x2F;articles&#x2F;the-bottom-emoji-breaks-rust-analyzer&quot;&gt;https:&#x2F;&#x2F;fasterthanli.me&#x2F;articles&#x2F;the-bottom-emoji-breaks-rust-analyzer&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+    </entry>
+</feed>

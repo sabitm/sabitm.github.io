@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Emoji (or Unicode) can be joined - sabitm</title>
+    
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><meta name="description" content="personal writings and thoughts Emoji (or Unicode) can be joined You can join one unicode character with another to create a new unicode character. The same applies with emoji"/><meta name="keywords" content="TIL, unicode, emoji" />
+    <meta property="og:title" content="Curiosus mentis - sabitm -&nbsp;Emoji (or Unicode) can be joined" />
+    <meta property="og:type" content="website"/><meta property="og:url" content="https:&#x2F;&#x2F;sabitm.github.io&#x2F;emoji-can-be-joined&#x2F;"/><meta property="og:description" content="You can join one unicode character with another to create a new unicode character. The same applies with emoji"/>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code:400,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://sabitm.github.io/style.css?h=d197e4e75d54240e3009">
+    <link rel="stylesheet" href=" https://sabitm.github.io/color/orange.css?h=a5a5d7faf9d4bc3e0b18">
+    
+<link rel="alternate" type="application/atom+xml" title="Curiosus mentis - sabitm RSS" href="https://sabitm.github.io/atom.xml"></head>
+    <body>
+        <div class="container">
+<header class="header">
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="&#x2F;">
+    <div class="logo">
+        blogs
+    </div>
+</a>
+        </div>
+        <div class="menu-trigger">menu</div>
+    </div>
+    
+    <nav class="menu">
+        <ul class="menu__inner menu__inner--desktop">
+            
+            
+                    <li>
+                        <a href="
+    
+        https://sabitm.github.io/about
+    
+">about</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        https://sabitm.github.io/contact
+    
+">contact</a>
+                    </li>
+                <ul class="menu__sub-inner">
+                        <li class="menu__sub-inner-more-trigger">show more ▾</li>
+                        <ul class="menu__sub-inner-more hidden">
+                            
+        <li>
+            <a href="
+    
+        https://sabitm.github.io/categories
+    
+">categories</a>
+        </li>
+        <li>
+            <a href="
+    
+        https://sabitm.github.io/tags
+    
+">tags</a>
+        </li>
+                        </ul>
+                    </ul>
+            </ul>
+
+        <ul class="menu__inner menu__inner--mobile">
+            
+        <li>
+            <a href="
+    
+        https://sabitm.github.io/about
+    
+">about</a>
+        </li>
+        <li>
+            <a href="
+    
+        https://sabitm.github.io/contact
+    
+">contact</a>
+        </li>
+        <li>
+            <a href="
+    
+        https://sabitm.github.io/categories
+    
+">categories</a>
+        </li>
+        <li>
+            <a href="
+    
+        https://sabitm.github.io/tags
+    
+">tags</a>
+        </li>
+        </ul>
+    </nav>
+
+    </header>
+<div class="content"><article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https:&#x2F;&#x2F;sabitm.github.io&#x2F;emoji-can-be-joined&#x2F;">Emoji (or Unicode) can be joined</a>
+            </h1>
+            
+    <div class="post-meta">
+        <span class="post-date">2023.03.04
+                </span>
+
+        <span class="post-author"></span>
+
+        
+
+    
+    :: {<a href="https://sabitm.github.io/categories/til/">TIL</a>} 
+
+            
+    ::
+    #<a href="https://sabitm.github.io/tags/unicode/">unicode</a>
+        
+    #<a href="https://sabitm.github.io/tags/emoji/">emoji</a>
+        
+    
+            
+        
+    </div>
+
+            
+    
+</header><p>Apparently, this '👨‍👩‍👦' or <a href="https://emojipedia.org/family-man-woman-boy/">Family: Man, Woman, Boy</a> emoji is consisted of
+multiple emojis that are combined or <em>joined</em>.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#cccccc;">$ node
+</span><span style="color:#cccccc;">Welcome to Node.js v19.7.0.
+</span><span style="color:#cccccc;">Type </span><span style="color:#ffd700;">&quot;.help&quot;</span><span style="color:#cccccc;"> for more information.
+</span><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&quot;👨‍👩‍👦&quot;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;👨&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;👩&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;👦&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+<p>or the other way around:</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#cccccc;">`👨\u{200D}👩\u{200D}👦`
+</span><span style="color:#ffd700;">&#39;👨‍👩‍👦&#39;
+</span></code></pre>
+<blockquote>
+<p><em>Note:</em> You might or might not seeing the family emoji as a single character glyph when you run the above code on your terminal.
+In order to render this emoji correctly, you have to use fonts that support emoji (like <a href="https://fonts.google.com/noto">Google Noto font</a>)
+and using a terminal that has support for rendering multi-width cell Unicode character (like <a href="https://github.com/kovidgoyal/kitty">kitty</a>).</p>
+</blockquote>
+<p>Huh. I thought all this time that every Unicode characters (including emojis) are represented by their unique code (which is true,
+but I thought it more like <a href="https://en.wikipedia.org/wiki/ASCII">ascii</a> characters). Today I learned that they can be joined or concatenated.</p>
+<p>If you take a look back at the above example. The emoji '👨‍👩‍👦' consists of 5 other Unicode characters or <a href="https://en.wikipedia.org/wiki/Code_point">code point</a>,
+which 3 of them is the <a href="https://emojipedia.org/man/">Man emoji (👨)</a>, <a href="https://emojipedia.org/woman/">Woman emoji (👩)</a>, and the
+<a href="https://emojipedia.org/boy/">Boy emoji (👦)</a>. When you reconstruct the 3 emojis into one like in the second code snippet, it'll return
+the family emoji back.</p>
+<p>So what is that empty char (<code>'‍'</code>) then? What is this <code>\u{200D}</code> (or <code>0x200D</code>) thing?</p>
+<p>Both of those are called ZWJ or <a href="https://emojipedia.org/zero-width-joiner/">Zero Width Joiner</a>.
+This invisible character act as glue or <em>joiner</em> for emoji sequence to create another emoji. AFAICT, this ZWJ sole purpose is
+to join a sequence of emoji and it is not required if you want to join non-emoji Unicode characters like this one: é
+(<a href="https://www.compart.com/en/unicode/U+0065">Latin Small Letter E</a> followed by <a href="https://www.compart.com/en/unicode/U+0301">Combining Acute Accent</a>)</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&#39;é&#39;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;e&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;́&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+<p>Right then. Let's play around with combining some emojis!</p>
+<p>Suppose you have this '🧔' or <a href="https://emojipedia.org/person-beard/">Person with Beard</a> emoji and you want to create the male version of it
+(yes, this &quot;Person with Beard&quot; emoji is supposed to be <em>gender neutral</em>). I could guess what some of you might think right now: &quot;Let's join
+this 🧔 emoji with the 👨 or <a href="https://emojipedia.org/man/">Man</a> emoji!&quot;.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#cccccc;">`🧔\u{200D}👨`
+</span><span style="color:#ffd700;">&#39;🧔‍👨&#39;
+</span></code></pre>
+<p>And... it didn't work? It just print both emoji characters side-by-side. Not this single 🧔‍♂️ or <a href="https://emojipedia.org/man-beard/">Man with a Beard</a>
+emoji we expected to see.</p>
+<p>Okay let's cheat this time.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&#39;🧔‍♂️&#39;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;🧔&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;♂&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;️&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+<p>Uh oh! So you're not joining it with the &quot;Man&quot; emoji, instead you use the '♂️' or <a href="https://emojipedia.org/male-sign/">Male Sign</a> emoji.
+But, why another ZWJ in the end?</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt;</span><span style="color:#cccccc;"> for (const c of </span><span style="color:#ffd700;">&quot;🧔‍♂️&quot;</span><span style="color:#cccccc;">) { console.log(`0x${c.codePointAt(0).toString(16)}`) }
+</span><span style="color:#cccccc;">0x1f9d4
+</span><span style="color:#cccccc;">0x200d
+</span><span style="color:#cccccc;">0x2642
+</span><span style="color:#cccccc;">0xfe0f
+</span></code></pre>
+<p>It turns out that last character is not a ZWJ! It is <a href="https://emojipedia.org/variation-selector-16/">Variation Selector-16</a> (U+FE0F).
+This another invisible character is used to specifies that the preceding character should be displayed in the emoji presentation, instead of
+its default text-mode display.</p>
+<p>We could then use the above information to create... the female version of &quot;Person with Beard&quot; emoji.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#cccccc;">`🧔\u{200D}♀\u{FE0F}`
+</span><span style="color:#ffd700;">&#39;🧔‍♀️&#39;
+</span></code></pre>
+<p>Want to add a skin tone? Follows the &quot;Person with Beard&quot; emoji with the skin tone of your choice without using ZWJ. Let's pick this
+&quot;U+1F3FB&quot; code point or <a href="https://emojipedia.org/light-skin-tone/">Light Skin Tone</a> as example.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#cccccc;">`🧔\u{1F3FB}\u{200D}♀\u{FE0F}`
+</span><span style="color:#ffd700;">&#39;🧔🏻‍♀️&#39;
+</span></code></pre>
+<blockquote>
+<p>Why using code point this time?
+<br><br>
+Because we aren't using ZWJ to <em>join</em> the skin tone, the browser will read the &quot;Person with Beard&quot; emoji followed by the
+&quot;Light Skin Tone&quot; emoji as a valid sequence and then will be rendered as single glyph like this:</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#cccccc;">`🧔🏻\u{200D}♀\u{FE0F}`
+</span><span style="color:#ffd700;">&#39;🧔🏻‍♀️&#39;
+</span></code></pre>
+<br>
+Using code point will show you clearly that we appending the skin tone emoji (or code point) after the person emoji.
+</blockquote>
+<p>It will be fun to do some 'Guess the Codepoint' game I think?</p>
+<p>Let's start from the easiest one.</p>
+<h2 id="guess-the-codepoint">Guess the Codepoint!<a class="zola-anchor" href="#guess-the-codepoint" aria-label="Anchor link for: guess-the-codepoint">§</a>
+</h2>
+<ol>
+<li>
+<p>❤️‍🔥(Heart on Fire)?</p>
+<details>
+   <summary>Show me</summary>
+<p>Yep it is the <a href="https://emojipedia.org/red-heart/">Red Heart</a> and <a href="https://emojipedia.org/fire/">Fire</a> emoji.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&#39;❤️‍🔥&#39;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;❤&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;️&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;🔥&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+</details>
+</li>
+<li>
+<p>😮‍💨 (Face Exhaling)?</p>
+<details>
+   <summary>Show me</summary>
+<p>It is <a href="https://emojipedia.org/face-with-open-mouth/">Face with Open Mouth</a> and <a href="https://emojipedia.org/dashing-away/">Dashing away</a>.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&#39;😮‍💨&#39;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;😮&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;💨&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+<p>Yeah, you need to have your mouth open to be able to exhale, right?</p>
+</details>
+</li>
+<li>
+<p>😵‍💫 (Face with Spiral Eyes)?</p>
+<details>
+   <summary>Show me</summary>
+<p>It is <a href="https://emojipedia.org/dizzy-face/">Face with Crossed-Out Eyes</a> and <a href="https://emojipedia.org/dizzy/">Dizzy</a>.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&#39;😵‍💫&#39;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;😵&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;💫&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+<p>I don't know what the differences between 'x' and spiral eyes <em>symbolically</em>, but both are similarly used to represent dizziness
+(in this emoji context).</p>
+</details>
+</li>
+<li>
+<p>👨‍🍼 (Man Feeding Baby)?</p>
+<details>
+   <summary>Show me</summary>
+<p>It is <a href="https://emojipedia.org/man/">Man</a> and <a href="https://emojipedia.org/baby-bottle/">Baby Bottle</a>. (Huh, where is the baby??)</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&#39;👨‍🍼&#39;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;👨&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;🍼&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+<p>Also, hope we can get <a href="https://twitter.com/Emojipedia/status/1302996324900626435">Man breast-feeding</a> soon!</p>
+</details>
+</li>
+<li>
+<p>🐻‍❄️ (Polar Bear)?</p>
+<details>
+   <summary>Show me</summary>
+<p>Yep. It is a <a href="https://emojipedia.org/bear/">Bear</a> sprinkled with <a href="https://emojipedia.org/snowflake/">Snowflake</a>.</p>
+<pre data-lang="sh" style="background-color:#191919;color:#ffffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span>&gt; </span><span style="color:#80d500;">[</span><span style="color:#cccccc;">...</span><span style="color:#ffd700;">&#39;🐻‍❄️&#39;</span><span style="color:#80d500;">]
+</span><span style="color:#8aa6c1;">[ </span><span style="color:#ffd700;">&#39;🐻&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;‍&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;❄&#39;</span><span style="color:#cccccc;">, </span><span style="color:#ffd700;">&#39;️&#39; </span><span style="color:#8aa6c1;">]
+</span></code></pre>
+</details>
+</li>
+</ol>
+<br>
+<p>Ref: <a href="https://fasterthanli.me/articles/the-bottom-emoji-breaks-rust-analyzer">https://fasterthanli.me/articles/the-bottom-emoji-breaks-rust-analyzer</a></p>
+
+
+        
+    
+
+        
+        
+    </article></div>
+    <div class="pagination">
+        <div class="pagination__buttons">
+            </div>
+    </div>
+<footer class="footer">
+                    <div class="footer__inner"><div class="copyright">
+            <span>© 2023 <a href="https://github.com/ejmg/zerm">zerm</a> :: Powered by <a href="https://www.getzola.org/">Zola</a></span>
+            <span>:: Theme made by <a href="https://github.com/ejmg">ejmg</a></span>
+        </div>
+    <script type="text/javascript" src="https://sabitm.github.io/assets/js/main.js"></script>
+</div>
+                    
+
+                </footer></div>
+    </body>
+</html>
