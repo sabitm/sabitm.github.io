@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact | sabitm</title>
+  <link rel="stylesheet" type="text/css" href="/_static/style.css">
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-a11y-dark.min.css">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-coldark-dark.min.css">
+  </noscript>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+</head>
+
+<body>
+  
+
+<aside class="sidebar" id="menu" data-pagefind-ignore="all">
+  <div class="sidebar-wrapper">
+    <div class="site-name">
+      <h1>sabitm</h1>
+    </div>
+    <nav>
+      <ul>
+        </li>
+
+<li> <details open>
+    <summary>Blog</summary>
+    <ul>
+      </li>
+
+<li> <a href="/Blog&#x2f;Emoji Could be Joined.html" title="Emoji Could be Joined"
+    >Emoji Could be Joined</a
+  >
+</li>
+</ul>
+  </details>
+  
+</li>
+<li class="current"> <a href="/Contact.html" title="Contact"
+    >Contact</a
+  >
+</li>
+</li>
+
+<li> <a href="/index.html" title="index"
+    >index</a
+  >
+</li>
+
+      </ul>
+    </nav>
+
+    <footer>
+      <p>
+        Built with
+        <a href="https://github.com/ecarrara/obsidian-garden">Obsidian Garden</a
+        >.
+      </p>
+    </footer>
+  </div>
+</aside>
+
+  <div class="main-area">
+    <div class="topnav">
+      <button id="toggle-menu">☰</button>
+      <nav><a title="Github" href="https:&#x2f;&#x2f;github.com&#x2f;sabitm">Github</a></nav>
+      
+    </div>
+
+    <div class="actions">
+      <button id="toggle-metadata">☰ Metadata</button>
+    </div>
+
+    <main class="main-content">
+<article id="note-content" data-pagefind-body>
+  <header>
+    <h1 class="note-title">Contact</h1>
+  </header><p>Feel free to get in touch with me at:</p>
+<ul>
+<li><a href="mailto:s%61bi%74mau%6Can%61%61@gmail.com">Email</a></li>
+<li><a href="https://github.com/sabitm">GitHub</a></li>
+<li><a href="https://twitter.com/sabit__">Twitter</a></li>
+<li><a href="https://www.linkedin.com/in/sabitm/">LinkedIn</a></li>
+<li><a href="https://old.reddit.com/user/sabitmaulanaa/">Reddit</a></li>
+</ul>
+
+</article>
+
+<aside class="right-sidebar" id="article-aside">
+  <div class="section">
+    <h3 class="section-title">Relationships</h3>
+    <div class="network-graph" id="graph"></div>
+  </div>
+
+  <nav class="section toc hide" id="toc-section">
+    <h3 class="section-title">On this page</h3>
+  </nav>
+</aside>
+
+</main>
+  </div>
+
+  <script type="module">
+    import {initGraph, toc} from "/_static/script.js"
+    const currentPath = "Contact"
+    const graph = {"edge_property":"directed","edges":[],"node_holes":[],"nodes":["Contact"]}
+
+    const g = initGraph(currentPath, graph)
+    document.getElementById("graph").appendChild(g.node())
+
+    const menuEl = document.getElementById("menu")
+    const rightSidebar = document.getElementById("article-aside")
+
+    document.getElementById("toggle-menu").addEventListener("click", (event) => {
+      menuEl.classList.toggle("show")
+      rightSidebar.classList.remove("show")
+      event.stopPropagation()
+    })
+    document.getElementById("toggle-metadata").addEventListener("click", (event) => {
+      rightSidebar.classList.toggle("show")
+      menuEl.classList.remove("show")
+      event.stopPropagation()
+    })
+    document.addEventListener("click", (event) => {
+      if (!menuEl.contains(event.target)) {
+        menuEl.classList.remove("show")
+      }
+
+      if (!rightSidebar.contains(event.target)) {
+        rightSidebar.classList.remove("show")
+      }
+    })
+
+    const articleEl = document.getElementById("note-content")
+    const tocSectionEl = document.getElementById("toc-section")
+    toc(articleEl, tocSectionEl)
+  </script>
+</body>
+
+</html>

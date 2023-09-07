@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Emoji Could be Joined | sabitm</title>
+  <link rel="stylesheet" type="text/css" href="/_static/style.css">
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-a11y-dark.min.css">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-coldark-dark.min.css">
+  </noscript>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+</head>
+
+<body>
+  
+
+<aside class="sidebar" id="menu" data-pagefind-ignore="all">
+  <div class="sidebar-wrapper">
+    <div class="site-name">
+      <h1>sabitm</h1>
+    </div>
+    <nav>
+      <ul>
+        </li>
+
+<li> <details open>
+    <summary>Blog</summary>
+    <ul>
+      <li class="current"> <a href="/Blog&#x2f;Emoji Could be Joined.html" title="Emoji Could be Joined"
+    >Emoji Could be Joined</a
+  >
+</li>
+</ul>
+  </details>
+  
+</li>
+</li>
+
+<li> <a href="/Contact.html" title="Contact"
+    >Contact</a
+  >
+</li>
+</li>
+
+<li> <a href="/index.html" title="index"
+    >index</a
+  >
+</li>
+
+      </ul>
+    </nav>
+
+    <footer>
+      <p>
+        Built with
+        <a href="https://github.com/ecarrara/obsidian-garden">Obsidian Garden</a
+        >.
+      </p>
+    </footer>
+  </div>
+</aside>
+
+  <div class="main-area">
+    <div class="topnav">
+      <button id="toggle-menu">☰</button>
+      <nav><a title="Github" href="https:&#x2f;&#x2f;github.com&#x2f;sabitm">Github</a></nav>
+      
+    </div>
+
+    <div class="actions">
+      <button id="toggle-metadata">☰ Metadata</button>
+    </div>
+
+    <main class="main-content">
+<article id="note-content" data-pagefind-body>
+  <header>
+    <h1 class="note-title">Emoji Could be Joined</h1>
+  </header><p><strong>Date</strong>: 2023-03-04</p>
+<p>Apparently, this ‘👨‍👩‍👦’ or <a href="https://emojipedia.org/family-man-woman-boy/">Family: Man, Woman, Boy</a> emoji is consisted of
+multiple emojis that are combined or <em>joined</em>.</p>
+<pre><code class="language-sh">$ node
+Welcome to Node.js v19.7.0.
+Type &quot;.help&quot; for more information.
+&gt; [...&quot;👨‍👩‍👦&quot;]
+[ '👨', '‍', '👩', '‍', '👦' ]
+</code></pre>
+<p>or the other way around:</p>
+<pre><code class="language-sh">&gt; `👨\u{200D}👩\u{200D}👦`
+'👨‍👩‍👦'
+</code></pre>
+<blockquote>
+<p><em>Note:</em> You might or might not seeing the family emoji as a single character glyph when you run the above code on your terminal.
+In order to render this emoji correctly, you have to use fonts that support emoji (like <a href="https://fonts.google.com/noto">Google Noto font</a>)
+and using a terminal that has support for rendering multi-width cell Unicode character (like <a href="https://github.com/kovidgoyal/kitty">kitty</a>).</p>
+</blockquote>
+<p>Huh. I thought all this time that every Unicode characters (including emojis) are represented by their unique code (which is true,
+but I thought it more like <a href="https://en.wikipedia.org/wiki/ASCII">ascii</a> characters). Today I learned that they can be joined or concatenated.</p>
+<p>If you take a look back at the above example. The emoji ‘👨‍👩‍👦’ consists of 5 other Unicode characters or <a href="https://en.wikipedia.org/wiki/Code_point">code point</a>,
+which 3 of them is the <a href="https://emojipedia.org/man/">Man emoji (👨)</a>, <a href="https://emojipedia.org/woman/">Woman emoji (👩)</a>, and the
+<a href="https://emojipedia.org/boy/">Boy emoji (👦)</a>. When you reconstruct the 3 emojis into one like in the second code snippet, it’ll return
+the family emoji back.</p>
+<p>So what is that empty char (<code>'‍'</code>) then? What is this <code>\u{200D}</code> (or <code>0x200D</code>) thing?</p>
+<p>Both of those are called ZWJ or <a href="https://emojipedia.org/zero-width-joiner/">Zero Width Joiner</a>.
+This invisible character act as glue or <em>joiner</em> for emoji sequence to create another emoji. AFAICT, this ZWJ sole purpose is
+to join a sequence of emoji and it is not required if you want to join non-emoji Unicode characters like this one: é
+(<a href="https://www.compart.com/en/unicode/U+0065">Latin Small Letter E</a> followed by <a href="https://www.compart.com/en/unicode/U+0301">Combining Acute Accent</a>)</p>
+<pre><code class="language-sh">&gt; [...'é']
+[ 'e', '́' ]
+</code></pre>
+<p>Right then. Let’s play around with combining some emojis!</p>
+<p>Suppose you have this ‘🧔’ or <a href="https://emojipedia.org/person-beard/">Person with Beard</a> emoji and you want to create the male version of it
+(yes, this “Person with Beard” emoji is supposed to be <em>gender neutral</em>). I could guess what some of you might think right now: “Let’s join
+this 🧔 emoji with the 👨 or <a href="https://emojipedia.org/man/">Man</a> emoji!”.</p>
+<pre><code class="language-sh">&gt; `🧔\u{200D}👨`
+'🧔‍👨'
+</code></pre>
+<p>And… it didn’t work? It just print both emoji characters side-by-side. Not this single 🧔‍♂️ or <a href="https://emojipedia.org/man-beard/">Man with a Beard</a>
+emoji we expected to see.</p>
+<p>Okay let’s cheat this time.</p>
+<pre><code class="language-sh">&gt; [...'🧔‍♂️']
+[ '🧔', '‍', '♂', '️' ]
+</code></pre>
+<p>Uh oh! So you’re not joining it with the “Man” emoji, instead you use the ‘♂️’ or <a href="https://emojipedia.org/male-sign/">Male Sign</a> emoji.
+But, why another ZWJ in the end?</p>
+<pre><code class="language-sh">&gt; for (const c of &quot;🧔‍♂️&quot;) { console.log(`0x${c.codePointAt(0).toString(16)}`) }
+0x1f9d4
+0x200d
+0x2642
+0xfe0f
+</code></pre>
+<p>It turns out that last character is not a ZWJ! It is <a href="https://emojipedia.org/variation-selector-16/">Variation Selector-16</a> (U+FE0F).
+This another invisible character is used to specifies that the preceding character should be displayed in the emoji presentation, instead of
+its default text-mode display.</p>
+<p>We could then use the above information to create… the female version of “Person with Beard” emoji.</p>
+<pre><code class="language-sh">&gt; `🧔\u{200D}♀\u{FE0F}`
+'🧔‍♀️'
+</code></pre>
+<p>Want to add a skin tone? Follows the “Person with Beard” emoji with the skin tone of your choice without using ZWJ. Let’s pick this
+“U+1F3FB” code point or <a href="https://emojipedia.org/light-skin-tone/">Light Skin Tone</a> as example.</p>
+<pre><code class="language-sh">&gt; `🧔\u{1F3FB}\u{200D}♀\u{FE0F}`
+'🧔🏻‍♀️'
+</code></pre>
+<blockquote>
+<p>Why using code point this time?
+<br><br>
+Because we aren’t using ZWJ to <em>join</em> the skin tone, the browser will read the “Person with Beard” emoji followed by the
+“Light Skin Tone” emoji as a valid sequence and then will be rendered as single glyph like this:</p>
+<pre><code class="language-sh">&gt; `🧔🏻\u{200D}♀\u{FE0F}`
+'🧔🏻‍♀️'
+</code></pre>
+<br>
+Using code point will show you clearly that we appending the skin tone emoji (or code point) after the person emoji.
+</blockquote>
+<p>It will be fun to do some ‘Guess the Codepoint’ game I think?</p>
+<p>Let’s start from the easiest one.</p>
+<h2>Guess the Codepoint!</h2>
+<ol>
+<li>
+<p>❤️‍🔥(Heart on Fire)?</p>
+<details>
+   <summary>Show me</summary>
+<p>Yep it is the <a href="https://emojipedia.org/red-heart/">Red Heart</a> and <a href="https://emojipedia.org/fire/">Fire</a> emoji.</p>
+<pre><code class="language-sh">&gt; [...'❤️‍🔥']
+[ '❤', '️', '‍', '🔥' ]
+</code></pre>
+</details>
+</li>
+<li>
+<p>😮‍💨 (Face Exhaling)?</p>
+<details>
+   <summary>Show me</summary>
+<p>It is <a href="https://emojipedia.org/face-with-open-mouth/">Face with Open Mouth</a> and <a href="https://emojipedia.org/dashing-away/">Dashing away</a>.</p>
+<pre><code class="language-sh">&gt; [...'😮‍💨']
+[ '😮', '‍', '💨' ]
+</code></pre>
+<p>You need to have your mouth open to be able to exhale, right?</p>
+</details>
+</li>
+<li>
+<p>😵‍💫 (Face with Spiral Eyes)?</p>
+<details>
+   <summary>Show me</summary>
+<p>It is <a href="https://emojipedia.org/dizzy-face/">Face with Crossed-Out Eyes</a> and <a href="https://emojipedia.org/dizzy/">Dizzy</a>.</p>
+<pre><code class="language-sh">&gt; [...'😵‍💫']
+[ '😵', '‍', '💫' ]
+</code></pre>
+<p>I don’t know the differences between ‘x’ eyes and spiral eyes <em>symbolically</em>, but both are similarly used to represent dizziness
+(in this emoji context).</p>
+</details>
+</li>
+<li>
+<p>👨‍🍼 (Man Feeding Baby)?</p>
+<details>
+   <summary>Show me</summary>
+<p>It is <a href="https://emojipedia.org/man/">Man</a> and <a href="https://emojipedia.org/baby-bottle/">Baby Bottle</a>. (Huh, where is the baby??)</p>
+<pre><code class="language-sh">&gt; [...'👨‍🍼']
+[ '👨', '‍', '🍼' ]
+</code></pre>
+<p>Also, hope we can get <a href="https://twitter.com/Emojipedia/status/1302996324900626435">Man breast-feeding</a> soon!</p>
+</details>
+</li>
+<li>
+<p>🐻‍❄️ (Polar Bear)?</p>
+<details>
+   <summary>Show me</summary>
+<p>Yep. It is a <a href="https://emojipedia.org/bear/">Bear</a> sprinkled with <a href="https://emojipedia.org/snowflake/">Snowflake</a>.</p>
+<pre><code class="language-sh">&gt; [...'🐻‍❄️']
+[ '🐻', '‍', '❄', '️' ]
+</code></pre>
+</details>
+</li>
+</ol>
+<br>
+<hr />
+<br>
+<p>Ref: <a href="https://fasterthanli.me/articles/the-bottom-emoji-breaks-rust-analyzer">https://fasterthanli.me/articles/the-bottom-emoji-breaks-rust-analyzer</a></p>
+<br>
+</article>
+
+<aside class="right-sidebar" id="article-aside">
+  <div class="section">
+    <h3 class="section-title">Relationships</h3>
+    <div class="network-graph" id="graph"></div>
+  </div>
+
+  <nav class="section toc hide" id="toc-section">
+    <h3 class="section-title">On this page</h3>
+  </nav>
+</aside>
+
+</main>
+  </div>
+
+  <script type="module">
+    import {initGraph, toc} from "/_static/script.js"
+    const currentPath = "Blog/Emoji Could be Joined"
+    const graph = {"edge_property":"directed","edges":[],"node_holes":[],"nodes":["Blog/Emoji Could be Joined"]}
+
+    const g = initGraph(currentPath, graph)
+    document.getElementById("graph").appendChild(g.node())
+
+    const menuEl = document.getElementById("menu")
+    const rightSidebar = document.getElementById("article-aside")
+
+    document.getElementById("toggle-menu").addEventListener("click", (event) => {
+      menuEl.classList.toggle("show")
+      rightSidebar.classList.remove("show")
+      event.stopPropagation()
+    })
+    document.getElementById("toggle-metadata").addEventListener("click", (event) => {
+      rightSidebar.classList.toggle("show")
+      menuEl.classList.remove("show")
+      event.stopPropagation()
+    })
+    document.addEventListener("click", (event) => {
+      if (!menuEl.contains(event.target)) {
+        menuEl.classList.remove("show")
+      }
+
+      if (!rightSidebar.contains(event.target)) {
+        rightSidebar.classList.remove("show")
+      }
+    })
+
+    const articleEl = document.getElementById("note-content")
+    const tocSectionEl = document.getElementById("toc-section")
+    toc(articleEl, tocSectionEl)
+  </script>
+</body>
+
+</html>
